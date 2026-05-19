@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/clerk-icon.png" alt="Clerk" width="120" />
+  <img src="./assets/clerk-banner.png" alt="Clerk — AI-native legal data layer for the agentic economy" />
 </p>
 
 # Clerk
