@@ -27,29 +27,39 @@ Requires Python 3.10+. One dependency: `httpx` (or `requests` as a fallback).
 
 ## Quick start
 
+`/search` works in demo mode without payment — perfect for trying the SDK first:
+
 ```python
 from clerk_api import ClerkClient
 
-client = ClerkClient()  # demo mode works without payment for /search
+client = ClerkClient()  # no auth — demo mode
 
 cases = client.search("SEC v Ripple")
 for case in cases:
     print(f"{case['case_name']} — {case['court']} — {case['date_filed']}")
 ```
 
-With x402 payment for full access:
+For full access on paid endpoints, you send USDC externally first (any
+wallet on Base — MetaMask, Bankr, web3.py, etc.) to Clerk's payment
+wallet, then pass the resulting transaction hash to the client:
 
 ```python
 import os
 from clerk_api import ClerkClient
 
-# Security: load the private key from env, never hardcode.
-# Production agents should use a delegated signer pattern.
-client = ClerkClient(wallet_private_key=os.environ["CLERK_AGENT_KEY"])
+# 1. Send $0.001 USDC to the Clerk payment wallet on Base (you do this
+#    out-of-band using any web3 client). Capture the resulting tx hash.
+# 2. Pass the tx_hash to the SDK. The client encodes it as an x402
+#    payment header that the server validates against the on-chain tx.
+client = ClerkClient(tx_hash=os.environ["CLERK_PAYMENT_TX"])
 
 docket = client.docket("67614382")
 print(docket)
 ```
+
+**Free unlimited access:** wallets holding **1B+ $CLERK** on Base
+bypass per-call payment entirely. The protocol auto-detects $CLERK
+balance from the payment context.
 
 ## Endpoints
 

@@ -1,14 +1,17 @@
 """Example: search federal court cases by query string.
 
-Works in demo mode (no payment) for the /search endpoint.
-For full access, set CLERK_AGENT_KEY in your env.
+`/search` works in demo mode without payment — perfect for trying the
+SDK before wiring up x402 payments. Demo mode returns up to ~12 results
+per IP per hour.
+
+For higher volumes, pre-pay $0.001 USDC per call (any wallet on Base)
+and pass the resulting tx hash via `tx_hash=...`. See the README for
+the full payment flow.
 """
-import os
 from clerk_api import ClerkClient
 
-# Demo mode — no key required for /search.
-# For paid endpoints, pass wallet_private_key (load from env, never hardcode).
-client = ClerkClient(wallet_private_key=os.environ.get("CLERK_AGENT_KEY"))
+# Demo mode — no payment required for /search.
+client = ClerkClient()
 
 # Search for cases involving a specific entity
 cases = client.search("Binance", limit=10)
