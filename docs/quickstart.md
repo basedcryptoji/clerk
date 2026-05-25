@@ -56,7 +56,7 @@ from web3 import Web3
 from eth_account import Account
 
 USDC_BASE = "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"  # USDC on Base
-CLERK_PAYMENT_WALLET = "0x4Dc284b6B1086bC3519Bf58F758f0F84b8c53FFd"
+CLERK_PAYMENT_WALLET = "0x8c84608E4b89a67203a16F02e68d3659659CCDed"
 AMOUNT = 1000  # 0.001 USDC = 1000 (6 decimals)
 
 w3 = Web3(Web3.HTTPProvider("https://mainnet.base.org"))
