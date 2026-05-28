@@ -1,8 +1,8 @@
 """Batch-register agent wallets as delegates under a main $CLERK wallet.
 
 The delegated signer pattern lets a single $CLERK-holding wallet authorize
-multiple "agent wallets" to access Clerk for free (under the 1B+ $CLERK
-free-tier benefit) without ever putting the main wallet in production code.
+multiple "agent wallets" to access Clerk at the discounted rate (under the
+250M+ $CLERK max-discount tier, 80% off) without ever putting the main wallet in production code.
 Each agent wallet is funded with only gas; the main wallet stays cold.
 
 Security: this script loads the main wallet's private key from the
@@ -131,7 +131,7 @@ if __name__ == "__main__":
 
     if not MAIN_WALLET_PRIVATE_KEY:
         print("ERROR: CLERK_MAIN_WALLET_KEY env var is not set.")
-        print("       export CLERK_MAIN_WALLET_KEY=\"0x...\"  (your 1B+ $CLERK wallet's private key)")
+        print("       export CLERK_MAIN_WALLET_KEY=\"0x...\"  (your $CLERK holder wallet's private key)")
         print("       Never hardcode the key in source.")
         raise SystemExit(1)
 

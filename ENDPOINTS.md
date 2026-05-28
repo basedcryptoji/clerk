@@ -3,7 +3,7 @@
 All endpoints live under `https://clerk.solvrlabs.ai/`.
 
 Authentication: x402 micropayments on Base. Pay $0.001 USDC per query.
-Hold **1B+ $CLERK** on Base → unlimited free tier.
+Hold **$CLERK** on Base → up to 80% off (max tier at 250M+).
 
 ## Discovery
 
@@ -211,7 +211,7 @@ List all delegates for a main wallet.
 
 The [`clerk_api` Python SDK](./clerk_api/) handles this automatically.
 
-For 1B+ $CLERK holders: the server detects your wallet's $CLERK balance and skips the payment requirement entirely.
+For top-tier (250M+) $CLERK holders: the server detects your wallet's $CLERK balance and applies the 80% max discount automatically.
 
 ---
 

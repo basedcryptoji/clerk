@@ -8,7 +8,7 @@
 
 Clerk provides permissionless access to **500M+ US federal court records** across **94 federal courts** through **11 data endpoints**. Built on Base, it eliminates subscriptions and API keys by using **x402 micropayments at just $0.001 per query in USDC**. Stack legal intelligence into any AI agent workflow.
 
-Live at [clerk.solvrlabs.ai](https://clerk.solvrlabs.ai) · Built by [Solvr Labs](https://solvrbot.com) · 1B+ $CLERK = free unlimited
+Live at [clerk.solvrlabs.ai](https://clerk.solvrlabs.ai) · Built by [Solvr Labs](https://solvrbot.com) · $CLERK holders get up to 80% off
 
 ---
 
@@ -61,8 +61,8 @@ docket = client.docket("67614382")
 print(docket)
 ```
 
-**Free unlimited access:** wallets holding **1B+ $CLERK** on Base
-bypass per-call payment entirely. The protocol auto-detects $CLERK
+**Max discount:** wallets holding **250M+ $CLERK** on Base get **80% off**
+every query — the top tier (not free). The protocol auto-detects $CLERK
 balance from the payment context.
 
 ## Endpoints
@@ -85,7 +85,7 @@ Full API reference: [`ENDPOINTS.md`](./ENDPOINTS.md)
 
 ## $CLERK token
 
-Pay-per-query via x402 micropayments. Or hold **1B+ $CLERK on Base** to unlock unlimited free queries on every endpoint.
+Pay-per-query via x402 micropayments. Or hold **$CLERK on Base** for tiered discounts: 25% off at 2.5M+, 50% off at 25M+, and **80% off (max) at 250M+**.
 
 The protocol auto-detects $CLERK balance from your signing wallet on each request.
 
@@ -133,7 +133,7 @@ MIT
 
 ## Support the project
 
-Hold $CLERK on Base for free unlimited queries, or trade on DEXScreener.
+Hold $CLERK on Base for up to 80% off queries, or trade on DEXScreener.
 
 `0x20EabA9d6818529cfFFA2c1C63B97A02a0049bA3`
 

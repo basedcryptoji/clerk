@@ -2,7 +2,7 @@
 
 Useful for compliance + risk research: "has this issuer been sued?"
 
-Requires payment ($0.001 USDC via x402, or 1B+ $CLERK held). Send
+Requires payment ($0.001 USDC via x402; 250M+ $CLERK holders get up to 80% off). Send
 USDC to Clerk's payment wallet on Base before running this script,
 then export the resulting tx hash:
 

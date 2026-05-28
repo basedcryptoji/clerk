@@ -11,7 +11,7 @@ Permissionless access to **500M+ US federal court records** across
 No subscriptions, no API keys, no forms — payment is x402 micropayments
 at $0.001 USDC per query.
 
-Hold 1B+ $CLERK on Base to unlock free unlimited queries.
+Hold $CLERK on Base for up to 80% off (max 80% discount at 250M+).
 
 ## 1. Install
 
@@ -98,11 +98,12 @@ Each successful query consumes a fresh payment. For agent workflows
 doing many queries, see the **delegated signer** section below — it
 amortizes payment across a single $CLERK-holding wallet.
 
-## 4. Free tier via $CLERK
+## 4. $CLERK holder discount
 
-Holding **1B+ $CLERK** on Base unlocks unlimited free queries on every
-endpoint. The protocol auto-detects $CLERK balance from the payment
-context and skips the per-call payment.
+Holding **$CLERK** on Base unlocks tiered discounts — 25% off at 2.5M+,
+50% off at 25M+, and the max **80% off at 250M+** — on every endpoint. The
+protocol auto-detects $CLERK balance from the payment context and reduces
+the per-call payment accordingly.
 
 Token contract: `0x20EabA9d6818529cfFFA2c1C63B97A02a0049bA3` (Base)
 [DEXScreener](https://dexscreener.com/base/0x4bacc9d57e57b8361d5d31e83daef1ddae57d2992227a5ae7fefa09c19f2ab19)
@@ -118,7 +119,7 @@ signing in code; your main wallet stays cold.
 Register one or more delegate wallets:
 
 ```bash
-export CLERK_MAIN_WALLET_KEY="0x..."  # your 1B+ $CLERK wallet's key
+export CLERK_MAIN_WALLET_KEY="0x..."  # your $CLERK holder wallet's key
 python examples/register_delegates.py --csv my_agents.csv
 ```
 
